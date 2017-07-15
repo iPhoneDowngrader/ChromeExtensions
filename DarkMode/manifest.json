@@ -1,0 +1,23 @@
+{
+  "name": "Dark Mode",
+  "manifest_version": 2,
+  "version": "0.1",
+  "description": "Dark Mode",
+  "icons": { "128": "DarkMode128.png" },
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "persistent": true,
+    "js": ["background.js"],
+    "matches": ["http://*/*", "https://*/*"]
+  }],
+  "permissions": ["http://*/*", "https://*/*"],
+  "browser_action": {
+    "persistent": true,
+    "default_title": "",
+    "default_icon": "DarkMode128.png",
+    "default_popup": "darkmode.html"
+  }
+}
